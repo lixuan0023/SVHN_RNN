@@ -202,8 +202,11 @@ class Inputs(object):
 
         with tf.name_scope("random_crop", values=[image]):
             image = tf.random_crop(image, [54, 54, 3])
-            image = tf.div(image, 256.0)
-            image = tf.multiply(tf.subtract(image, 0.5), 2)
+            # The random_* ops do not necessarily clamp.
+            image = tf.clip_by_value(image, 0.0, 1.0)
+            # Rescale to [-1,1] instead of [0, 1]
+            image = tf.subtract(image, 0.5)
+            image = tf.multiply(image, 2.0)
         image_summary("final_image", image)
 
         return image

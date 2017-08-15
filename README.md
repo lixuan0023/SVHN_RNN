@@ -4,6 +4,7 @@ Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford
 
 ## Contact
 ***Author***: lixuan
+
 ***E-mail***: lixuan0023@163.com
 
 ## Contents
