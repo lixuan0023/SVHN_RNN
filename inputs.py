@@ -109,7 +109,7 @@ class Inputs(object):
             image = tf.decode_raw(raw_image, tf.uint8)
             image = tf.reshape(image, [64, 64, 3])
             image = tf.image.convert_image_dtype(image, dtype=tf.float32)
-            image = tf.div(image, 256.0)
+            image = tf.clip_by_value(image, 0.0, 1.0)
             image = tf.multiply(tf.subtract(image, 0.5), 2)
             return image
 
@@ -205,8 +205,7 @@ class Inputs(object):
             # The random_* ops do not necessarily clamp.
             image = tf.clip_by_value(image, 0.0, 1.0)
             # Rescale to [-1,1] instead of [0, 1]
-            image = tf.subtract(image, 0.5)
-            image = tf.multiply(image, 2.0)
+            image = tf.multiply(tf.subtract(image, 0.5), 2)
         image_summary("final_image", image)
 
         return image
