@@ -15,7 +15,7 @@ class InferenceWrapper(object):
         mymodel = Model(vocab_size=12,
                         mode='inference',
                         embedding_size=512,
-                        num_lstm_units=128,
+                        num_lstm_units=64,
                         lstm_dropout_keep_prob=0.7,
                         cnn_drop_rate=0.2,
                         initializer_scale=0.08)
