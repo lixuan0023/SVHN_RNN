@@ -7,7 +7,7 @@ class Model(object):
                  vocab_size=12,
                  mode='train',
                  embedding_size=512,
-                 num_lstm_units=128,
+                 num_lstm_units=16,
                  lstm_dropout_keep_prob=0.7,
                  cnn_drop_rate=0.2,
                  initializer_scale=0.08):
