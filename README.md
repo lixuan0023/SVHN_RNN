@@ -17,6 +17,9 @@ Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford
     * [Install Required Packages](#install-required-packages)
     * [Prepare the Training Data](#prepare-the-training-data)
 * [Training a Model](#training-a-model)
+* [Tensorboard](#Tensorboard)
+    * [Accuracy](#Accuracy)
+    * [Loss](#Accuracy)
 * [Generating House Numbers](#generating-captions)
 
 ## Model Overview
@@ -132,6 +135,15 @@ $ python eval.py --data_dir ./data --checkpoint_dir ./logs/train --eval_logdir .
 ```
 $ tensorboard --logdir ./logs
 ```
+## Tensorboard
+
+### Accuracy
+![Accuracy](g3doc/accuracy.png)
+
+> Accuracy 96.34% on test dataset after about 6 days
+
+### Loss
+![Loss](g3doc/losses.png)
 
 ## Generating House Numbers
 ### Run in Jupyter
