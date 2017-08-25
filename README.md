@@ -135,7 +135,8 @@ $ python eval.py --data_dir ./data --checkpoint_dir ./logs/train --eval_logdir .
 ```
 $ tensorboard --logdir ./logs
 ```
-## Tensorboard
+
+## Results in Tensorboard
 
 ### Accuracy
 ![Accuracy](g3doc/accuracy.png)
