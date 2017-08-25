@@ -47,21 +47,21 @@ class Inference(object):
 
         return self.raw_image, inference_list
 
-        def output(self, inference_list):
-            print('The candidate result as follow.')
-            print('No.\tresult\tprobability')
-            for i, result in enumerate(inference_list):
-                numbers = result.numbers[1:-1]
-                ns = [str(n) for n in numbers]
-                strn = ''.join(ns)
-                prob = math.exp(result.logprob)
-                print(' %d\t %s\t% 0.3f' % (i + 1, strn, prob))
+    def output(self, inference_list):
+        print('The candidate result as follow.')
+        print('No.\tresult\tprobability')
+        for i, result in enumerate(inference_list):
+            numbers = result.numbers[1:-1]
+            ns = [str(n) for n in numbers]
+            strn = ''.join(ns)
+            prob = math.exp(result.logprob)
+            print(' %d\t %s\t% 0.3f' % (i + 1, strn, prob))
 
 if __name__ == '__main__':
     path_to_checkpoint_file = '/notebooks/dataVolume/workspace/logs/train/latest.ckpt'
     path_to_image_file = '/notebooks/dataVolume/workspace/test/10.png'
-    inf = Inference(path_to_checkpoint_file)
-    image, inference_list = inf.run(path_to_image_file)
+    inference_model = Inference(path_to_checkpoint_file)
+    image, inference_list = inference_model.run(path_to_image_file)
 
     imshow(image)
-    inf.output(inference_list)
+    inference_model.output(inference_list)
