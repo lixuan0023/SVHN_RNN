@@ -17,9 +17,9 @@ Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford
     * [Install Required Packages](#install-required-packages)
     * [Prepare the Training Data](#prepare-the-training-data)
 * [Training a Model](#training-a-model)
-* [Tensorboard](#Tensorboard)
-    * [Accuracy](#Accuracy)
-    * [Loss](#Loss)
+* [Results in Tensorboard](#results-in-tensorboard)
+    * [Accuracy](#accuracy)
+    * [Loss](#loss)
 * [Generating House Numbers](#generating-captions)
 
 ## Model Overview
