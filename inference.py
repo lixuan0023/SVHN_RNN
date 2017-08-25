@@ -28,15 +28,14 @@ class Inference(object):
 
     def feed_image(self):
         path_to_image_file = self.path_to_image_file
-        assert os.path.exists(
-            path_to_image_file), 'The file %s does not exist' % path_to_image_file
+        assert os.path.exists(path_to_image_file), 'The file %s does not exist' % path_to_image_file
 
-            raw_image = Image.open(path_to_image_file)
-            image = raw_image.resize([54, 54])
-            image = np.array(image, dtype=np.float32)
-            image = image / 256.0
-            image = (image - 0.5) * 2
-            self.image = image
+        raw_image = Image.open(path_to_image_file)
+        image = raw_image.resize([54, 54])
+        image = np.array(image, dtype=np.float32)
+        image = image / 256.0
+        image = (image - 0.5) * 2
+        self.image = image
         self.raw_image = raw_image
 
     def run(self, path_to_image_file):
@@ -62,7 +61,7 @@ if __name__ == '__main__':
     path_to_checkpoint_file = '/notebooks/dataVolume/workspace/logs/train/latest.ckpt'
     path_to_image_file = '/notebooks/dataVolume/workspace/test/10.png'
     inf = Inference(path_to_checkpoint_file)
-    image,inference_list = inf.run(path_to_image_file)
-    
+    image, inference_list = inf.run(path_to_image_file)
+
     imshow(image)
     inf.output(inference_list)
