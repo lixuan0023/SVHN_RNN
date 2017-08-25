@@ -17,7 +17,7 @@ Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford
     * [Install Required Packages](#install-required-packages)
     * [Prepare the Training Data](#prepare-the-training-data)
 * [Training a Model](#training-a-model)
-* [Generating Captions](#generating-captions)
+* [Generating House Numbers](#generating-captions)
 
 ## Model Overview
 
@@ -133,11 +133,12 @@ $ python eval.py --data_dir ./data --checkpoint_dir ./logs/train --eval_logdir .
 $ tensorboard --logdir ./logs
 ```
 
-## Generating Captions
+## Generating House Numbers
 ### Run in Jupyter
 ```
 Open 'run_inference.ipynb' in Jupyter
 ```
 ### Result
 ![inference1](g3doc/inference1.png)
+
 ![inference2](g3doc/inference2.png)
