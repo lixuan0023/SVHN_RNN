@@ -3,7 +3,7 @@ A TensorFlow implementation of the assignment in [Udacity.com](https://classroom
 
 Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford.edu/housenumbers/)
 
-Chinese Version Document: 
+Chinese Version Document: (由于Github解码pdf速度问题，建议下载后阅览)
 * [SVHN_RNN项目介绍.pdf](g3doc/SVHN_RNN项目介绍.pdf)
 * [SVHN.ppt](g3doc/SVHN.pdf)
 
