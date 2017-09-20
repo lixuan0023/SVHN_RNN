@@ -127,7 +127,7 @@ class Model(object):
             initializer = self.initializer
             image_embeddings = tf.contrib.layers.fully_connected(
                 inputs=hidden10,
-                num_outputs=512,
+                num_outputs=self.embedding_size,#512
                 activation_fn=None,
                 weights_initializer=initializer,
                 biases_initializer=None,
@@ -160,7 +160,7 @@ class Model(object):
 
     def rnn_layer(self, inputs_embeddings):
         lstm_dropout_keep_prob = self.lstm_dropout_keep_prob  # 0.7
-        num_lstm_units = self.num_lstm_units  # 128
+        num_lstm_units = self.num_lstm_units  # 64
         initializer = self.initializer
 
         lstm_cell = tf.contrib.rnn.BasicLSTMCell(

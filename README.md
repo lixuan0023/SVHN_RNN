@@ -2,6 +2,7 @@
 A TensorFlow implementation of the assignment in [Udacity.com](https://classroom.udacity.com/courses/ud730/lessons/224c71d3-9dc3-4cb5-abca-f8d12fce5cfa/concepts/f4215f02-b293-476c-97fa-c1e6ed83979b), referred to [SVHNClassifier](https://github.com/potterhsu/SVHNClassifier) and [im2txt](https://github.com/tensorflow/models/tree/master/im2txt). The *SVHN_RNN* model combines both CNN and RNN, the CNN layer encodes an image into a fixed-length vector representation, and then the RNN layer decodes the representation into a series of digital numbers(housenumbers).
 
 Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford.edu/housenumbers/)
+Chinese Version Document: [SVHN_RNN项目介绍.pdf](g3doc/SVHN_RNN项目介绍.pdf),[SVHN.ppt](g3doc/SVHN.pdf)
 
 ## Contact
 ***Author***: lixuan
