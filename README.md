@@ -5,7 +5,7 @@ Dataset available from: [Street View House Numbers (SVHN)](http://ufldl.stanford
 
 Chinese Version Document: (由于Github解码pdf速度问题，建议下载后阅览)
 * [SVHN_RNN项目介绍.pdf](g3doc/SVHN_RNN项目介绍.pdf)
-* [SVHN.ppt](g3doc/SVHN.pdf)
+* [SVHN项目ppt](g3doc/SVHN.pdf)
 
 ## Contact
 ***Author***: lixuan
